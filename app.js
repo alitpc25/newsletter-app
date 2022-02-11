@@ -8,8 +8,8 @@ const mailchimp = require("@mailchimp/mailchimp_marketing");
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("staticFiles"))
 
-const apiKey = "1b795cd0840e238b66f34690687d1f13-us14"
-var audienceId = "a522cb060a";
+const apiKey = config.MY_API_KEY
+var audienceId = config.AUDIENCE_ID;
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
